@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!-- adapted from https://github.com/angular/angular-seed -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bullhorn REST API Example </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/css/normalize.css">
+  <link rel="stylesheet" href="lib/css/main.css">
+  <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="MainCtrl">
+    <table ng-table class="table">
+    <tr ng-repeat="candidate in candidates">
+        <td data-title="'ID'">{{candidate.id}}</td>
+        <td data-title="'Name'">{{candidate.name}}</td>
+        <td data-title="'Email'">{{candidate.email}}</td>
+        <td data-title="'Status'">{{candidate.status}}</td>
+        <td data-title="'Date Added'">{{candidate.dateAdded | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+        <td data-title="'Experience'">{{candidate.experience}} year</td>
+    </tr>
+    </table>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+  <script src="http://bazalt-cms.com/assets/ng-table/0.3.0/ng-table.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
