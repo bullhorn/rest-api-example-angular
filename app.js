@@ -14,7 +14,7 @@ controller('MainCtrl', function($scope,$candidates) {
 	return {
 		get: function(params){
 			var deferred = $q.defer(),
-				url = ['https://bhnext.bullhornstaffing.com/core/search/Candidate?'
+				url = [$config.restUrl,'search/Candidate?'
 						,'BhRestToken=', $config.BhRestToken
 						,'&query=',params.query||'id:[* TO *]'
 						,'&fields=',params.fields||'id,name'
